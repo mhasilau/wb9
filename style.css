@@ -1,38 +1,67 @@
-p {
-    color: chocolate;
-    font-family: Evgenia-Deco;
+.after {
+    color: red;
 }
 
-.text-class {
-    color: crimson;
+li {
+    list-style: none;
 }
 
-#text-id {
-    color: darkgreen;
+.after > li::after {
+    content: " @ ";
 }
 
-p b {
-    color: darkslateblue;
+.after > li::before {
+    content: " * ";
 }
 
-
-
- strong + span {
-    color: darkturquoise;
-    background-color: chocolate;
-    font-size: 40px;
+.links > li > a:link {
+    color: tomato;
 }
 
-p > i {
-    color: gold;
+.links > li > a:visited {
+    color: blue;
 }
 
-@font-face {
-	font-family: 'Evgenia-Deco';
-	src: url('../fonts/evgenia_deco.eot'); /* IE 9 Compatibility Mode */
-	src: url('../fonts/evgenia_deco.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
-		url('../fonts/evgenia_deco.woff2') format('woff2'), /* Super Modern Browsers */
-		url('../fonts/evgenia_deco.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
-		url('../fonts/evgenia_deco.ttf') format('truetype'), /* Safari, Android, iOS */
-		url('../fonts/evgenia_deco.svg#evgenia_deco') format('svg'); /* Chrome < 4, Legacy iOS */
+.links > li > a:active {
+    color: green;
+}
+
+h1:hover {
+    color: aqua;
+    font-size: 150%;
+}
+
+span:empty {
+    background-color: blueviolet;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+} 
+
+/* .child > li:first-child {
+    color: blue;
+    font-size: 20px;
+} */
+
+/* .child > li:last-child {
+    color: rgb(237, 240, 123);
+    font-size: 30px;
+} */
+
+.child > li:nth-child(even) {
+    color: rgb(51, 218, 25);
+    font-size: 20px;
+}
+
+.child > li:nth-child(odd) {
+    color: rgb(67, 25, 218);
+    font-size: 25px;
+}
+
+img {
+    width: 100px;
+}
+
+img:hover {
+    width: 200px;
 }
