@@ -1,67 +1,17 @@
-.after {
-    color: red;
+table {
+    margin: 0;
+    padding: 0;
 }
 
-li {
-    list-style: none;
+td {
+    border: 1px solid black;
+    width: 20px;
+    height: 20px;
 }
 
-.after > li::after {
-    content: " @ ";
+.even > td:nth-child(even) {
+    background-color: black;
 }
-
-.after > li::before {
-    content: " * ";
-}
-
-.links > li > a:link {
-    color: tomato;
-}
-
-.links > li > a:visited {
-    color: blue;
-}
-
-.links > li > a:active {
-    color: green;
-}
-
-h1:hover {
-    color: aqua;
-    font-size: 150%;
-}
-
-span:empty {
-    background-color: blueviolet;
-    width: 10px;
-    height: 10px;
-    display: inline-block;
-} 
-
-/* .child > li:first-child {
-    color: blue;
-    font-size: 20px;
-} */
-
-/* .child > li:last-child {
-    color: rgb(237, 240, 123);
-    font-size: 30px;
-} */
-
-.child > li:nth-child(even) {
-    color: rgb(51, 218, 25);
-    font-size: 20px;
-}
-
-.child > li:nth-child(odd) {
-    color: rgb(67, 25, 218);
-    font-size: 25px;
-}
-
-img {
-    width: 100px;
-}
-
-img:hover {
-    width: 200px;
+.odd > td:nth-child(odd) {
+    background-color: black;
 }
