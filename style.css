@@ -1,39 +1,30 @@
 * {
-    margin: 0;
-    padding: 0;
+    padding: 10px;
+    margin: 5px;
 }
 
-p {
+.wrapper {
+    height: 500px;
+    display: flex;
+    min-width: 400px;
+}
+
+.left {
+    height: 400px;
+    width: 60%;
     background-color: coral;
 }
 
-div {
-    border: 1px solid black;
+.right {
+    height: 400px;
+    width: 40%;
+    background-color: rgb(53, 6, 89);
+    color: aliceblue;
 }
 
-#position-r {
-    position: relative;
-    top: 40px;
-    right: 50px;
-    background-color: aqua;
-    opacity: 0.5;
-}
-
-#position-a {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: darkgoldenrod;
-}
-
-#position-f {
-    position: fixed;
-    bottom: 50px;
-    left: 50px;
-    background-color: violet;
-}
-
-.position-s {
-    position: sticky;
-    top: 0;
+@media screen and (max-width: 500px) {
+    .wrapper {
+        display: block;
+        
+    }
 }
