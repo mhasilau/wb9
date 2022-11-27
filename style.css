@@ -1,0 +1,50 @@
+@import './fonts/teddy_bear/teddy_bear.css';
+@import './fonts/days/days.css';
+
+* {
+    font-family: 'Days';
+    margin: 0;
+}
+
+header {
+    height: 70px;
+    background-color: cyan;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.nav {
+    width: 50%;
+}
+
+ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+.logo {
+
+}
+
+.logo > img {
+    height: 50px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+
+.avatar > img {
+    height: 50px;
+}
+
+
+
+
