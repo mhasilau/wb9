@@ -1,82 +1,100 @@
-// const str = 'some RAnDom StriNg'
-// const str2 = 'string 2'
+// const age = 18
 
-// console.log(str.toLocaleLowerCase());
-// console.log(str.toUpperCase());
-
-// console.log(str.repeat(3));
-
-// console.log(str.toLowerCase().includes('dom'));
-
-// console.log(str.concat(str2, 'fdfd', 5464));
-
-// console.log(str.startsWith('som'));
-// console.log(str.endsWith('!'));
-
-// console.log(str.replaceAll(' ', ' * '));
-
-// console.log(str.charAt(8));
-
-// console.log(str.indexOf('m'));
-// console.log(str.lastIndexOf('m'));
-
-// console.log(str.slice(3, 6));
-// console.log(str.substr(5, 5));
-
-// const inner = prompt()
-// console.log(inner.toUpperCase());
-
-// const arr = [4, 'fdsfd', null, [0,1,4,5,96]]
-// console.log(arr[3][4]);
-
-// const arr1 = [1,2,3,5,4,8]
-// const arr2 = [7,8,9]
-
-// console.log(arr1.concat(arr2, 2424, 'sss'));
-
-// const str2 = 'qwerty qazxsw qwsxza'
-// const arrStr2 = str2.split(' ')
-// console.log(arrStr2);
-
-// const arr3 = [1,4,5,2,3,5]
-// const srtArr3 = arr3.join('* -')
-// console.log(srtArr3);
+// if ( age > 18 ) {
+//     console.log('true');
+// } else if ( age < 18 ) {
+//     console.log('false');
+// } else {
+//     console.log('= 18');
+// }
 
 
-const arr4 = [0,1,2,3,4,5,6,7,8,9]
-// console.log(arr4.reverse());
-// console.log(arr4.includes(44));
+// >=
+// <=
+// ==
+// ===
 
-// arr4.push(10,11,12)
-// console.log(arr4);
-// const pop = arr4.pop()
-// console.log(arr4);
-// console.log(pop);
+// !=
+// !==
 
-// arr4.unshift(3,2,1)
-// console.log(arr4);
-// const shift = arr4.shift()
-// console.log(arr4);
-// console.log(shift);
+// console.log( 1 === '1' );
 
-// const arr5 = [31,684,361,648,315,100, 74,687]
-// console.log(arr5.sort((a,b) => a - b));
+// const n = 'vasya'
+// if (n != 'vasya') {
+//     console.log('yes');
+// } 
 
-// console.log(arr4.slice(4, 7));
-// console.log(arr4);
-// console.log('--------');
-// console.log(arr4.splice(4, 3));
-// console.log(arr4);
+// %
 
-// console.log(arr4.splice(4,3, 40,50,60));
-// console.log(arr4);
+// console.log(254253435483 % 3543435432543554);
 
-const myName = prompt()
-console.log(myName);
-const arrName = myName.split(' ')
-console.log(arrName);
-arrName[0] = arrName[0].toLowerCase()
-arrName[1] = arrName[1].toUpperCase()
-console.log(arrName);
-const newMyname = arrName.join(' ')
-console.log(newMyname);
+
+// const sex = 'woman'
+// const age = 30
+// const hairColor = 'blue'
+
+// if ((sex === 'man' || age >= 30) && hairColor !== 'blue') {
+//     console.log('u r welcome');
+// } else {
+//     console.log('sorry');
+// }
+
+
+// const userName = 'mike'
+
+// switch (userName) {
+//     case 'mike':
+//     case 'nick':
+//         console.log('hello, guys');
+//         break;
+//     case 'mary':
+//         console.log('hello, mary');
+//         break;
+
+//     default:
+//         console.log('who are you?');
+//         break;
+// }
+
+
+
+// let i = 5
+
+// while (i < 5) {
+//     console.log('i = ', i);
+//     i++
+// }
+
+// let j = 5
+
+// do {
+//     console.log('j = ', j);
+//     j++
+// } while (j < 5);
+
+
+// for (let i = 0; i < 10; i++) {
+//     if (i % 2 === 0) {
+//         console.log(i);
+//     }
+// }
+
+// const arr = [31,34,3514,64,31,35,43,51,56]
+// // console.log(arr);
+
+// for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] % 2 === 0 && i % 2 !== 0) {
+//         console.log(arr[i]);
+//     }
+// }
+
+const arr = [2,5,8,18,31,50]
+
+let sum = 0
+
+for (let i = 0; i < arr.length; i++) {
+    sum += arr[i]
+    console.log(sum);
+}
+
+
