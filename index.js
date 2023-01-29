@@ -1,100 +1,132 @@
-// const age = 18
+// (function() {
+//     console.log('hello');
+// })()
+// const teacher = {
+//     firstName: 'milhail',
+//     secondName: 'hasilau',
+//     age: 31,
+//     job: 'frontend developer'
+// }
+// console.log(teacher);
 
-// if ( age > 18 ) {
-//     console.log('true');
-// } else if ( age < 18 ) {
-//     console.log('false');
-// } else {
-//     console.log('= 18');
+// // const objKeys = Object.keys(teacher)
+// // console.log(objKeys);
+
+// // const objValues = Object.values(teacher)
+// // console.log(objValues);
+
+// // console.log(teacher.isMarried);
+// // teacher.isMarried = true
+// // teacher.job = 'teacher'
+// // console.log(teacher);
+
+// const obj2 = teacher
+// console.log(obj2);
+// // obj2.field = 'qqqq'
+// console.log(teacher);
+// console.log(obj2);
+
+// const obj3 = {}
+
+
+// for ( prop in teacher) {
+//     console.log(prop);
+//     obj3[prop] = teacher[prop]
+// }
+// console.log(obj3);
+// obj3.lol = 'lol'
+
+// console.log(teacher);
+// console.log(obj3);
+
+
+// const obj4 = Object.assign(teacher)
+// console.log('obj4',obj4);
+// const obj5 = Object.freeze(teacher)
+// obj5.lol = 'lol'
+// console.log('obj5', obj5);
+// console.log(teacher.hasOwnProperty('age'));
+
+
+
+
+// function sayHello() {
+//     console.log('hello!');
+// }
+// sayHello()
+// sayHello()
+
+
+
+// function summ(a,b,c) {
+//     console.log(a+b-c);
 // }
 
-
-// >=
-// <=
-// ==
-// ===
-
-// !=
-// !==
-
-// console.log( 1 === '1' );
-
-// const n = 'vasya'
-// if (n != 'vasya') {
-//     console.log('yes');
-// } 
-
-// %
-
-// console.log(254253435483 % 3543435432543554);
+// summ(4,56,7)
+// summ(7,4,56)
 
 
-// const sex = 'woman'
-// const age = 30
-// const hairColor = 'blue'
-
-// if ((sex === 'man' || age >= 30) && hairColor !== 'blue') {
-//     console.log('u r welcome');
-// } else {
-//     console.log('sorry');
+// const summ2 = function(a,b,c) {
+//     console.log(a+b-c);
 // }
 
+// summ2(4,56,7)
+// summ2(7,4,56)
 
-// const userName = 'mike'
 
-// switch (userName) {
-//     case 'mike':
-//     case 'nick':
-//         console.log('hello, guys');
-//         break;
-//     case 'mary':
-//         console.log('hello, mary');
-//         break;
-
-//     default:
-//         console.log('who are you?');
-//         break;
+// const summ3 = (a,b,c) => {
+//     console.log(a+b-c);
 // }
 
+// summ3(4,56,7)
+// summ3(7,4,56)
 
 
-// let i = 5
 
-// while (i < 5) {
-//     console.log('i = ', i);
-//     i++
+
+// function args(a,b,c, ...args) {
+//     const sum = a+b+c
+//     console.log(args);
+// }
+// args(1,2,3,4,5,6,7,8)
+
+// const arr = [5,4,3,2,1]
+// console.log(...arr);
+
+
+
+// function uravn(a,b,c){
+//    const disc = (b*b-4*a*c);
+//    console.log(disc);
+//     if (disc > 0) {
+//         const x1 = (-b+Math.sqrt(disc))/(2*a)
+//         const x2 = (-b-Math.sqrt(disc))/(2*a)
+//         console.log(x1);
+//         console.log(x2);
+
+//     }  else if(disc == 0){
+//         const x = (-b+Math.sqrt(disc))/(2*a)
+//         console.log(x);
+//      } else { 
+//         console.log('нет корней');
+//      }
+
 // }
 
-// let j = 5
-
-// do {
-//     console.log('j = ', j);
-//     j++
-// } while (j < 5);
+// uravn(3,-4,94)
 
 
-// for (let i = 0; i < 10; i++) {
-//     if (i % 2 === 0) {
-//         console.log(i);
-//     }
-// }
 
-// const arr = [31,34,3514,64,31,35,43,51,56]
-// // console.log(arr);
+function sti(str){
+    let counter = 0 
+    const arr = [' ', '.', ',', '!']
 
-// for (let i = 0; i < arr.length; i++) {
-//     if (arr[i] % 2 === 0 && i % 2 !== 0) {
-//         console.log(arr[i]);
-//     }
-// }
-
-const arr = [2,5,8,18,31,50]
-
-let sum = 0
-
-for (let i = 0; i < arr.length; i++) {
-    sum += arr[i]
-    console.log(sum);
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === str[i].toUpperCase() && !arr.includes(str[i])) {
+            counter++
+        }
+    }
+    console.log(counter);
 }
 
-
+sti ('I Have a CAr')
