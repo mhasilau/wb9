@@ -1,132 +1,142 @@
-// (function() {
-//     console.log('hello');
-// })()
-// const teacher = {
-//     firstName: 'milhail',
+// call, bind, apply
+// const obj = {
+//     firstName: 'mikhail',
 //     secondName: 'hasilau',
-//     age: 31,
-//     job: 'frontend developer'
-// }
-// console.log(teacher);
-
-// // const objKeys = Object.keys(teacher)
-// // console.log(objKeys);
-
-// // const objValues = Object.values(teacher)
-// // console.log(objValues);
-
-// // console.log(teacher.isMarried);
-// // teacher.isMarried = true
-// // teacher.job = 'teacher'
-// // console.log(teacher);
-
-// const obj2 = teacher
-// console.log(obj2);
-// // obj2.field = 'qqqq'
-// console.log(teacher);
-// console.log(obj2);
-
-// const obj3 = {}
-
-
-// for ( prop in teacher) {
-//     console.log(prop);
-//     obj3[prop] = teacher[prop]
-// }
-// console.log(obj3);
-// obj3.lol = 'lol'
-
-// console.log(teacher);
-// console.log(obj3);
-
-
-// const obj4 = Object.assign(teacher)
-// console.log('obj4',obj4);
-// const obj5 = Object.freeze(teacher)
-// obj5.lol = 'lol'
-// console.log('obj5', obj5);
-// console.log(teacher.hasOwnProperty('age'));
-
-
-
-
-// function sayHello() {
-//     console.log('hello!');
-// }
-// sayHello()
-// sayHello()
-
-
-
-// function summ(a,b,c) {
-//     console.log(a+b-c);
+//     info: function(phone, email) {
+//         console.log(`${this.firstName} ${this.secondName}`);
+//         if (phone && email) {
+//             console.log('Phone: ', phone);
+//             console.log('Email: ', email);
+//         }
+//     }
 // }
 
-// summ(4,56,7)
-// summ(7,4,56)
+// obj.info()
 
-
-// const summ2 = function(a,b,c) {
-//     console.log(a+b-c);
+// const o1 = {
+//     firstName: 'mike',
+//     secondName: 'wasovski',
 // }
 
-// summ2(4,56,7)
-// summ2(7,4,56)
+// const bindFunction = obj.info.bind(o1)
+// bindFunction('111-11-11', 'mike@ya.ru')
 
-
-// const summ3 = (a,b,c) => {
-//     console.log(a+b-c);
+// const o2 = {
+//     firstName: 'peter',
+//     secondName: 'pen',
 // }
 
-// summ3(4,56,7)
-// summ3(7,4,56)
+// obj.info.call(o2, '222-22-22', 'peter@ya.ru')
 
-
-
-
-// function args(a,b,c, ...args) {
-//     const sum = a+b+c
-//     console.log(args);
+// const o3 = {
+//     firstName: 'doctor',
+//     secondName: 'who',
 // }
-// args(1,2,3,4,5,6,7,8)
-
-// const arr = [5,4,3,2,1]
-// console.log(...arr);
+// obj.info.apply(o3, ['333-33-33', 'doc@ya.ru'])
 
 
+//=================
+// promises
 
-// function uravn(a,b,c){
-//    const disc = (b*b-4*a*c);
-//    console.log(disc);
-//     if (disc > 0) {
-//         const x1 = (-b+Math.sqrt(disc))/(2*a)
-//         const x2 = (-b-Math.sqrt(disc))/(2*a)
-//         console.log(x1);
-//         console.log(x2);
+// const promise = new Promise( (resolve, reject) => {
+//     // setTimeout( () => resolve('done!'), 2000)
+//     setTimeout( () => reject('error!'), 2000)
+// })
 
-//     }  else if(disc == 0){
-//         const x = (-b+Math.sqrt(disc))/(2*a)
-//         console.log(x);
-//      } else { 
-//         console.log('нет корней');
-//      }
+// console.log(promise);
+// promise.then(
+//     result => console.log(result) //,
+//     // error => console.log(error)
+// )
+// .catch( error => console.log(error))
+// .finally( () => console.log('finally'))
 
+
+
+// call, bind, apply - arrow function has no context and arguments
+// const obj = {
+//     firstName: 'mikhail',
+//     secondName: 'hasilau',
+//     info: () => {
+//         console.log(`${this.firstName} ${this.secondName}`);
+//         console.log(arguments);
+//         // if (phone && email) {
+//         //     console.log('Phone: ', phone);
+//         //     console.log('Email: ', email);
+//         // }
+//     }
+// }
+// const o2 = {
+//     firstName: 'peter',
+//     secondName: 'pen',
 // }
 
-// uravn(3,-4,94)
+// obj.info.call(o2, '222-22-22', 'peter@ya.ru')
+
+
+//===================
+
+// const url = 'https://jsonplaceholder.typicode.com/users/1'
+
+// const f = async () => {
+//     await fetch(url)
+//       .then(response => response.json())
+//       .then(json => console.log(json))
+// }
+
+// const a = async () => {
+//     console.log('start');
+//     await f()
+//     console.log('end');
+// }
+
+// // a()
+
+// const err = () => {
+//     throw 'some error =('
+// }
+
+// const tryCatch = async () => {
+//     try {
+//         await a()
+//         // err()
+//     } catch (error) {
+//         console.log(error);
+//     } finally {
+//         console.log('finally');
+//     }
+// }
+
+// tryCatch()
+
+
+// // console.log('start');
+// // setTimeout( () => console.log('setTimeout'), 0)
+// // console.log('end');
 
 
 
-function sti(str){
-    let counter = 0 
-    const arr = [' ', '.', ',', '!']
 
-    for (let i = 0; i < str.length; i++) {
-        if (str[i] === str[i].toUpperCase() && !arr.includes(str[i])) {
-            counter++
-        }
-    }
-    console.log(counter);
+// TODO for trainer
+// function is not work
+
+const usersUrl = 'https://jsonplaceholder.typicode.com/users'
+let usersArray
+async function getUsers() {
+    arr = await fetch(usersUrl)
+        .then(response => response.json())
+        .then(users => {
+            let arr;
+            arr = users
+            return arr
+        })   
 }
+// getUsers()
 
-sti ('I Have a CAr')
+const a = async () => {
+    await getUsers().then(res => usersArray = res)
+}
+a()
+
+// const usersArray = getUsers()
+console.log(usersArray);
