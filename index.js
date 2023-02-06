@@ -121,16 +121,26 @@
 // function is not work
 
 const btn = document.getElementById('btn')
+const i = document.getElementById('i')
+btn.disabled = true
 let userName
+
+i.addEventListener('input', () => {
+    if (i.value && i.value < 11) {
+        btn.disabled = false
+    } else btn.disabled = true
+})
+
+
+
 const usersUrl = 'https://jsonplaceholder.typicode.com/users'
 async function getUsers(url) {
-    const i = +document.getElementById('i').value
     const s = document.getElementById('s')
     await fetch(url)
         .then(response => response.json())
         .then(users => {
             users.forEach( el => {
-                if (el.id === i) {
+                if (el.id == i.value) {
                     s.innerText = el.name
                 }
             })
