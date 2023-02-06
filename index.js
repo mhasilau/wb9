@@ -120,23 +120,26 @@
 // TODO for trainer
 // function is not work
 
+const btn = document.getElementById('btn')
+let userName
 const usersUrl = 'https://jsonplaceholder.typicode.com/users'
-let usersArray
-async function getUsers() {
-    arr = await fetch(usersUrl)
+async function getUsers(url) {
+    const i = +document.getElementById('i').value
+    const s = document.getElementById('s')
+    await fetch(url)
         .then(response => response.json())
         .then(users => {
-            let arr;
-            arr = users
-            return arr
+            users.forEach( el => {
+                if (el.id === i) {
+                    s.innerText = el.name
+                }
+            })
         })   
 }
-// getUsers()
-
-const a = async () => {
-    await getUsers().then(res => usersArray = res)
+async function getValue() {
+    await getUsers(usersUrl)
+    
 }
-a()
-
-// const usersArray = getUsers()
-console.log(usersArray);
+btn.onclick = () => {
+    getValue()
+}
