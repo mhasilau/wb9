@@ -1,142 +1,43 @@
-// call, bind, apply
-// const obj = {
-//     firstName: 'mikhail',
-//     secondName: 'hasilau',
-//     info: function(phone, email) {
-//         console.log(`${this.firstName} ${this.secondName}`);
-//         if (phone && email) {
-//             console.log('Phone: ', phone);
-//             console.log('Email: ', email);
-//         }
-//     }
+// const btn1 = document.getElementById('btn1')
+
+
+// const btn2_1 = document.querySelector('.btn2')
+// const btn2_2 = document.querySelector('#btn2')
+
+// // console.log(btn2_1);
+// // console.log(btn2_2);
+
+
+// const li = document.querySelectorAll('li')
+// console.log(li);
+
+// for (let elem of li) {
+//     console.log(elem.matches('li[value="6"]'));
 // }
 
-// obj.info()
+// const chapter = document.querySelector('.chapter'); // LI
 
-// const o1 = {
-//     firstName: 'mike',
-//     secondName: 'wasovski',
-// }
+// console.log(chapter.closest('.book')); // UL
+// console.log(chapter.closest('.contents')); // DIV
 
-// const bindFunction = obj.info.bind(o1)
-// bindFunction('111-11-11', 'mike@ya.ru')
-
-// const o2 = {
-//     firstName: 'peter',
-//     secondName: 'pen',
-// }
-
-// obj.info.call(o2, '222-22-22', 'peter@ya.ru')
-
-// const o3 = {
-//     firstName: 'doctor',
-//     secondName: 'who',
-// }
-// obj.info.apply(o3, ['333-33-33', 'doc@ya.ru'])
+// console.log(chapter.closest('h1')); // null (потому что h1 - не предок)
 
 
-//=================
-// promises
+const inpWrite = document.querySelector('#writting')
+const p = document.querySelector('#p')
+const remove = document.querySelector('#btn-rem')
+p.innerHTML = 'Hello'
 
-// const promise = new Promise( (resolve, reject) => {
-//     // setTimeout( () => resolve('done!'), 2000)
-//     setTimeout( () => reject('error!'), 2000)
-// })
-
-// console.log(promise);
-// promise.then(
-//     result => console.log(result) //,
-//     // error => console.log(error)
-// )
-// .catch( error => console.log(error))
-// .finally( () => console.log('finally'))
-
-
-
-// call, bind, apply - arrow function has no context and arguments
-// const obj = {
-//     firstName: 'mikhail',
-//     secondName: 'hasilau',
-//     info: () => {
-//         console.log(`${this.firstName} ${this.secondName}`);
-//         console.log(arguments);
-//         // if (phone && email) {
-//         //     console.log('Phone: ', phone);
-//         //     console.log('Email: ', email);
-//         // }
-//     }
-// }
-// const o2 = {
-//     firstName: 'peter',
-//     secondName: 'pen',
-// }
-
-// obj.info.call(o2, '222-22-22', 'peter@ya.ru')
-
-
-//===================
-
-// const url = 'https://jsonplaceholder.typicode.com/users/1'
-
-// const f = async () => {
-//     await fetch(url)
-//       .then(response => response.json())
-//       .then(json => console.log(json))
-// }
-
-// const a = async () => {
-//     console.log('start');
-//     await f()
-//     console.log('end');
-// }
-
-// // a()
-
-// const err = () => {
-//     throw 'some error =('
-// }
-
-// const tryCatch = async () => {
-//     try {
-//         await a()
-//         // err()
-//     } catch (error) {
-//         console.log(error);
-//     } finally {
-//         console.log('finally');
-//     }
-// }
-
-// tryCatch()
-
-
-// // console.log('start');
-// // setTimeout( () => console.log('setTimeout'), 0)
-// // console.log('end');
-
-
-
-
-// TODO for trainer
-// function is not work
-
-const usersUrl = 'https://jsonplaceholder.typicode.com/users'
-let usersArray
-async function getUsers() {
-    arr = await fetch(usersUrl)
-        .then(response => response.json())
-        .then(users => {
-            let arr;
-            arr = users
-            return arr
-        })   
+const inputFunc = () => {
+    console.log(inpWrite.value);
+    p.innerHTML = inpWrite.value
 }
-// getUsers()
 
-const a = async () => {
-    await getUsers().then(res => usersArray = res)
+inpWrite.addEventListener('input', inputFunc)
+
+remove.onclick = () => {
+    alert('remove listener from input')
+    inpWrite.removeEventListener('input', inputFunc)
+    inpWrite.value = ''
 }
-a()
 
-// const usersArray = getUsers()
-console.log(usersArray);
