@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <button id="tic-tac-toe">TicTacToe</button>
+        <button id="wat-number">What number</button>
+        <div class="ssplp">
+            <div class="name">
+                <p>Введите имя</p>
+                <input type="text" id="input-name">
+                <button id="enter-name">Продолжить</button>
+            </div>
+            <div class="game-count">
+                <p id="game-label"></p>
+                <input type="number" id="input-number" min="1" value="1">
+                <button id="enter-number">Продолжить</button>
+            </div>
+            <div class="game">
+                <div class="pics">
+                    <div>
+                        <img src="./stone.png" alt="stone" id="stone">
+                    </div>
+                    <div>
+                        <img src="./scissors.png" alt="scissors" id="scissors">
+                    </div>
+                    <div>
+                        <img src="./paper.png" alt="paper" id="paper">
+                    </div>
+                    <div>
+                        <img src="./lizard.png" alt="lizard" id="lizard">
+                    </div>
+                    <div>
+                        <img src="./spoke.png" alt="spoke" id="spoke">
+                    </div>
+                </div>
+                <div class="count">
+                    <span id="user-count"></span><span id="user-win">0</span>
+                    <p>Победы компьютера : <span id="pc">0</span></p>
+                    <p>Всего сыграно игр : <span id="total">0</span></p>
+                    <img src="./kamen-nozhnicy-bumaga-spok-jashherica_1.jpg" alt="" height="315px">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/_blQfsOvDps" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="wat-number">
+            <input type="number" min="0" id="inner-number">
+            <button id="check">Проверить</button>
+        </div>
+    </div>
+
+    <div class="modal">
+        <div class="inner-modal">
+            <div class="modal-pics">
+                <img id="user-pic">
+                <span> против </span>
+                <img id="pc-pic">
+            </div>
+            <button id="close-modal">Закрыть</button>
+        </div>
+    </div>
+    <div class="end">
+        <div class="modal-end">
+            <p>Игра окончена!</p>
+            <p id="end"></p>
+            <button id="again">Еще раз</button>
+        </div>
+    </div>
+    <div class="number-modal">
+        <div class="notice">
+            <p id="more-less"></p>
+            <p id="end-number"></p>
+            <button id="again-num">Еще раз</button>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+    <script src="./ttt.js"></script>
+    <script src="./number.js"></script>
+</body>
+</html>
