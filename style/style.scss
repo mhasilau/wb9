@@ -1,0 +1,32 @@
+.data {
+    width: 100%;
+    height: 100px;
+    background-color: aqua;
+
+    &-input {
+        background-color: brown;
+    }
+
+}
+
+.div {
+
+    .div-second {
+
+        .div-second-nested {
+
+            .div-second-nested-text {
+
+                p {
+                    color: green;
+                }
+                &-p {
+                    
+                }
+            }
+        }
+    }
+    p {
+        color: red;
+    }
+}
