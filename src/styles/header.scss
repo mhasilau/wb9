@@ -1,0 +1,18 @@
+@import './colors.scss';
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 5fr 2fr;
+    background-color: $gray;
+    .logo {
+
+    }
+
+    .company-name {
+
+    }
+
+    .contacts {
+
+    }
+}
