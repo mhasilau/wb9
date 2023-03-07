@@ -1,17 +1,8 @@
-// import axios from 'axios';
-import {user} from './mock-data'
+import axios from 'axios';
 
-// export const getUser = async (api) => {
-//     // fetch(`${api}/users`)
-//     //     .then(res => res.json())
-//     //     .then(json => console.log(json))
+export const getUser = async (api) => {
+    // return fetch(api)
+    //     .then(res => res.json())
 
-//     return axios.get(api)
-//         .then(res => res.json())
-//         // .then(json => console.log(json))
-// }
-
-export const getUser = async () => {
-    return user
+    return axios.get(api)
 }
-
