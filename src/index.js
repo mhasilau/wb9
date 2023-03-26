@@ -8,7 +8,6 @@ window.onload = () => {
     switch (pathURL) {
         case location.main:
             links()
-            user()
             break;
         case location.page1:
             links()
