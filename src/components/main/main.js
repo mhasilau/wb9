@@ -1,12 +1,17 @@
 import { API } from '../../api/api';
 import axios from 'axios';
 
+const add = document.getElementById('add')
+
 const post = async () => {
-    const o = await axios.post(`${API.db}/test.json`, {
-        username: 'sdsd',
-        age: 414
+    const postObj = await axios.post(`${API.db}/users.json`, {
+        username: 'lol',
+        password: 42
     });
-    return console.log(o);
+    return console.log(postObj);
 }
 
-post()
+add.onclick = () => {
+
+    post()
+}
